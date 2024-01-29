@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Layton Lofts</title>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- default favicon -->
+<link rel="shortcut icon" href="./LL_Logo_wout_bckgrnd.png" type="image/x-icon">
+
+<!-- wideley used favicon -->
+<link rel="icon" href="./LL_Logo_wout_bckgrnd.png" sizes="32x32" type="image/png">
+
+<!-- for apple mobile devices -->
+<link rel="apple-touch-icon-precomposed" href="./LL_Logo_wout_bckgrnd.png" type="image/png" sizes="152x152">
+<link rel="apple-touch-icon-precomposed" href="./LL_Logo_wout_bckgrnd.png" type="image/png" sizes="120x120">
+
+<!-- google tv favicon -->
+<link rel="icon" href="./LL_Logo_wout_bckgrnd.png" sizes="96x96" type="image/png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+
+
+
+    <style>
+        * {
+            font-family: 'Raleway', sans-serif, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        body{
+            margin:auto;
+            padding:0;
+
+
+        }
+        .make-ht-twentypx{
+            height:20px;
+        }
+
+        }
+        .prenav {
+            top:0;
+            margin:0;
+            padding:0;
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: space-between;
+            background-color: #424242;
+            /* background-color: #7b6856; */
+            overflow:hidden;
+            align-items: center;
+            
+        }
+        .top-words{
+            height: 20px;
+            margin:0;
+            padding:0;
+            color: white;
+        }
+        .actual-phoneSVG {
+            display:inline-block;
+            padding: 0px;
+            /* background: red; */
+            overflow: hidden;
+            height: 20px;
+            width: 20px;
+            margin: 0 0 0 0
+        }
+        .phoneSVG{
+            width: 20px;
+            height: 20px;
+            overflow: hidden;
+            
+        }
+
+        .phoneAndNumberContainer{
+            width:auto;
+            height: auto;
+            display: flex;
+            justify-content: flex-start;
+            margin-left: 40px;
+        } 
+        .AndNumber {
+            margin:0;
+            padding:0;
+            height:20px;
+        }
+        .prenav-options-container{
+            margin:0;
+            padding:0;
+            width: auto;
+            height: auto;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin-right: 40px;
+            
+        }
+        ul {
+            list-style: none;
+            display: flex;
+            height: auto;
+            justify-content: space-around;
+            align-items:center;
+
+            margin:0;
+            padding:0;
+        }
+        li {
+            padding: 0 5px;
+            width:auto;
+            height: auto;
+            margin:0;
+            background-color: #543e2a;  
+            border-radius: 2px;
+        }
+        a { 
+            margin:0;
+            padding:0;
+            height: auto;
+            color: white;
+            text-decoration: none; 
+        }
+        a:visited { text-decoration: none; }
+        a:hover { text-decoration: none; }
+        a:focus { text-decoration: none; }
+        a:hover, a:active { text-decoration: none; }
+          .button {
+    background-color: #7b6856; /* light brown */
+    border: none;
+    color: white;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 0;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+  }
+li:hover, .custom-btn:hover {
+	background: #001f3f;
+	color: #fff;
+	-webkit-transition: all 0.2s linear;
+	   -moz-transition: all 0.2s linear;
+		-ms-transition: all 0.2s linear;
+		 -o-transition: all 0.2s linear;
+			transition: all 0.2s linear;
+}
+  .custom-btn{
+    width:100%;
+    height: 100%;
+  }
+  .button2:hover {
+    box-shadow: 0 140px 160px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+        .main-navbar{
+            width: 100%;
+            height:8%;
+            display: flex;
+            justify-content: space-between;
+            background-color: transparent;
+        } 
+        .navbar-inner{
+            background-color:#d6cdca;
+            height:8%;
+            opacity: 74%;
+            width: 100%;
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            
+        }
+
+        .navbar-inner-uls{
+            background-color: #5e452d;
+            top:0;
+            right:0;
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            padding-inline-start: 40px;
+            border-radius: 0px;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+            padding-right: 40px;
+            margin: 0px 0px 0px 0px;
+            
+        }
+        .navbar-inner-ul{
+            background-color: #5e452d;
+            opacity: 0;
+            top:0;
+            right:0;
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            padding-inline-start: 40px;
+            border-radius: 0px;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+            padding-right: 40px;
+            border-bottom: 10px;
+            
+        }
+        .nav-item{
+            height:110%;
+            width:auto;
+            font-size: 18pt;
+            padding:1px;
+            margin: 0 4px;
+        }
+        .main-photo{
+        position: static;
+        top:-100px;
+        margin:0;
+        pading:0;
+        width: 100%;
+        height: 600px;
+        object-fit: cover;
+        overflow: hidden;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        z-index: -1;
+
+        }
+        .main-words{
+        position:absolute;
+        color:white;
+  
+        }
+
+
+      .main-img{
+      position:relative;
+      left: 200px;
+      }
+      .center-div {
+      margin: 0 auto !important;
+      padding:0;
+
+      }
+      .mySlides{
+      paddng: 0;
+      margin:0;
+      margin: 0 auto !important;
+      max-width:800px;
+      min-width: 400px;
+      width: 800px;
+      } -->
+
+.apply {
+  --b: .1em;    /* border thickness */
+  --d: 20px;    /* the 3D depth */
+  --h: 1.2em;   /* the height */
+  --c: #7b6856; /* the color */
+  
+  --_s: calc(var(--d) + var(--b));
+  line-height: var(--h);
+  color: #0000;
+  text-shadow: 
+    0 calc(-1*var(--_t,0em)) var(--c), 
+    0 calc(var(--h) - var(--_t,0em)) #fff;
+  border: solid #0000;
+  overflow: hidden;
+  border-width: var(--b) var(--b) var(--_s) var(--_s);
+  background:
+    linear-gradient(var(--c) 0 0) 100% 100%
+     /101% var(--_p,0%) no-repeat,
+    conic-gradient(at left var(--d)  bottom var(--d),
+      #0000 90deg, rgb(255 255 255 /0.3) 0 225deg,rgb(255 255 255 /0.6) 0) border-box,
+    conic-gradient(at left var(--_s) bottom var(--_s),
+      #0000 90deg,var(--c) 0) 0 100%/calc(100% - var(--b)) calc(100% - var(--b))  border-box;
+  transform: translate(calc(var(--_i,var(--d))/-1),var(--_i,var(--d)));
+  clip-path: 
+    polygon(
+     var(--_i,var(--d)) calc(var(--d) - var(--_i,var(--d))), 
+     var(--d) 0%, 
+     100% 0%, 
+     100% calc(100% - var(--d)),
+     calc(100% - var(--d) + var(--_i,var(--d))) calc(100% - var(--_i,var(--d))),
+    var(--_i,var(--d)) calc(100% - var(--_i,var(--d)))
+    );
+  transition: 0.5s;
+}
+.apply:hover {
+  --_i: 0%;
+  --_t: var(--h);
+  --_p: 105%;
+}
+.apply:active {
+  --_i: 5px;
+  box-shadow: 0 0 0 100vw inset #0009;
+  transition: 0s;
+}
+.apply:focus-visible {
+  clip-path: none;
+  transform: none;
+  border-width: var(--b);
+  outline-offset: .1em;
+  background: var(--c);
+  color: #fff;
+  transition: 0s;
+} 
+.apply {
+  font-family: system-ui, sans-serif;
+  font-weight: bold;
+  font-size: 4rem;
+  padding: 0 .2em;
+  cursor: pointer;
+  margin: .1em;
+
+}
+
+
+
+
+    .prenav {
+      top:0;
+      margin:0;
+      padding:0;
+      width: 100%;
+      height: 25px;
+      display: flex;
+      justify-content: space-between;
+      background-color: #424242;
+      /* background-color: #7b6856; */
+      overflow:hidden;
+      align-items: center;
+}
+
+.slideshows {
+  height:100%!important;
+  margin: auto 10%;
+
+
+}
+.mainimg > .mySlides{
+
+ width:100% !important;
+ height:100%;
+
+    object-fit: contain !important;
+    overflow: hidden !important;
+
+}
+
+.bottompics {
+width:100%;
+height:250px;
+    object-fit: contain !important;
+  max-height:250px !important;
+  overflow: auto;
+}
+
+</style>
+</head>
+<body>
+
+    <nav id="prenav" class=" prenav make-ht-twentypx">
+      <a href="sms:(414) 292-9979">
+        <div class="phoneAndNumberContainer make-ht-twentypx">
+             <div class="phoneSVG make-ht-twentypx">
+                 
+                    <svg class="actual-phoneSVG make-ht-twentypx">
+                        <use xlink:href="#phone" href="#phone" height="20" width="20">
+                        </use> 
+                    </svg>
+            </div>
+            <div class="AndNumber make-ht-twentypx">
+                        <p class="top-words make-ht-twentypx"> (414) 292-9979</p>
+                    </div>
+                
+            </div> 
+        </div>
+        </a>
+        <div class="prenav-options-container make-ht-twentypx">
+             <ul class="make-ht-twentypx" >
+                <li class="scheduleATour make-ht-twentypx "><a href="">  <button class="custom-btn btn-13 button button2">Schedule A Tour</button></a></li>
+                <li class="applicantLogin make-ht-twentypx"><a href="">Applicant Login</a></li>
+                <li class="residentLogin make-ht-twentypx"><a href="">Resident Login</a></li>
+                <li class="managementLogin make-ht-twentypx"><a href="">Management Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+
+
+
+
+
+    <nav class="main-navbar navbar-default navbar-fixed-top nav w3-bar">
+      <div class="navbar-inner">
+        <img src="./LL_Logo_w_blck_bckgrnd.png" alt="Layton Lofts Logo without background" width="125" height="100%">
+        <div class="navbar-inner-ul"></div>
+          <ul class="nav navbar-inner-uls navbar-nav pt-3 custom-scroll" aria-labelledby="nav-btn-label">
+            <li class="nav-item active w3-bar-item w3-button w3-hide-small">
+                <a  href="/" class=" nav-link">Home  </a>
+            </li>
+
+            <li class="nav-item w3-bar-item w3-button w3-hide-small">
+                <a  href="#photo-gallery" class="nav-link">Photos  </a>
+            </li>
+            <li class="nav-item w3-bar-item w3-button w3-hide-small">
+                <a href="#availability" class="nav-link">Availability  </a>
+            </li>
+            <li class="nav-item w3-bar-item w3-button w3-hide-small">
+                <a href="#amenities" class="nav-link">Amenities  </a>
+            </li>
+            <li class="nav-item w3-bar-item w3-button w3-hide-small">
+                <a href="#about-us" class="nav-link">About Us </a>
+            </li>
+
+            <li class="nav-item w3-bar-item w3-button w3-hide-small">
+                <a href="#maps-and-directions" class="nav-link">Map  </a>
+            </li>
+            <!-- <li class="nav-item w3-bar-item w3-button w3-hide-small">
+                <a  href="/brochure" class="nav-link">eBrochure  </a>
+            </li> -->
+            <li class="nav-item w3-bar-item w3-button w3-hide-small">
+                <a href="sms:(414) 292-9979" class="nav-link">Contact Us  </a>
+            </li>
+            <!-- <li class="nav-item w3-bar-item w3-button w3-hide-small">
+                <a  href="/about-us" class="nav-link">About Us  </a>
+            </li> -->
+            <!-- <li class="nav-item w3-bar-item w3-button w3-hide-small">
+                <a href="/faq" class="nav-link">FAQ  </a>
+            </li> -->
+              <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="myFunction()">&#9776;</a>
+          
+
+        <div id="demo" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium">
+          <li class="nav-item w3-bar-item w3-button" style="color:#543e2a">
+              <a  href="/" class=" nav-link">Home  </a>
+          </li>
+          <li class="nav-item w3-bar-item w3-button ">
+              <a  href="#photo-gallery" class="nav-link">Photos  </a>
+          </li>
+          <li class="nav-item w3-bar-item w3-button ">
+              <a href="#availability" class="nav-link">Availability  </a>
+          </li>
+          <li class="nav-item w3-bar-item w3-button ">
+              <a href="#amenities" class="nav-link">Amenities  </a>
+          </li>
+          <li class="nav-item w3-bar-item w3-button ">
+              <a href="#about-us" class="nav-link">About Us </a>
+          </li>
+          <li class="nav-item w3-bar-item w3-button ">
+              <a href="#maps-and-directions" class="nav-link">Map  </a>
+          </li>
+          <!-- <li class="nav-item w3-bar-item w3-button ">
+              <a  href="/brochure" class="nav-link">eBrochure  </a>
+          </li> -->
+          <li class="nav-item w3-bar-item w3-button ">
+              <a href="sms:(414) 292-9979" class="nav-link">Contact Us  </a>
+          </li>
+          <!-- <li class="nav-item w3-bar-item w3-button ">
+              <a  href="/about-us" class="nav-link">About Us  </a>
+          </li>
+          <li class="nav-item w3-bar-item w3-button ">
+              <a href="/faq" class="nav-link">FAQ  </a> 
+          </li> -->
+        </div>
+                </div>
+      </div>
+    </nav>
+
+
+
+
+
+
+
+
+
+
+<script>
+function myFunction() {
+  var x = document.getElementById("demo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="main-photo">
+      
+      <img  class="main-img" src="./1669612478607_Apartment_2_.jpg" height="1800" width=""/>
+      
+      <h1 class=" main-words w3-jumbo w3-animate-top"><strong>Construction Finished!</strong>
+        <br><span style="font-size:70%;text-decoration:underline;"><em>Now Accepting Applications!</em></span>
+        <br><a href="https://layton.app.doorloop.com/tenant-portal/rental-application?&propertyId=62b0713261238d3b6540b88e"><button class=" button apply" style="background:rgba(255,255,255,50%); ">APPLY NOW!</button></a>
+    </h1>
+    
+      <hr class="w3-border-grey" style="margin:auto; width:40%">
+    </div>
+
+    
+
+
+
+
+<!-- !PAGE CONTENT! -->
+<div class=" center-div w3-main w3-white w3-center" style="margin-left:260px">
+
+  <!-- Push down content on small screens -->
+   <div class=" w3-hide-large" style="margin-top:80px"></div>
+
+  <!-- Slideshow Header -->
+  <div id="photo-gallery" class="slideshows">
+  <div class=" w3-container mainimg" style="overflow:hidden; max-height:600px" id="apartment">
+    <h2 class="" style="color:#543e2a; font-size:40pt;"><strong><span style="font-family: 'Times New Roman';color: #7b6856;">Layton Lofts</span></strong></h2>
+    <div class="w3-display-container mySlides">
+    <img src="./lvngrm.jpeg" style="width:100%;margin-bottom:-6px">
+      <div class="w3-display-bottomleft w3-container w3-black">
+        <p>Living Room</p>
+      </div>
+    </div>
+    <div class="w3-display-container mySlides">
+    <img src="./wshrdryer.jpeg" style="width:100%;margin-bottom:-6px">
+      <div class="w3-display-bottomleft w3-container w3-black">
+        <p>In Unit Washer & Dryer</p>
+      </div>
+    </div>
+    <div class="w3-display-container mySlides">
+    <img src="./mnrmclst.jpeg" style="width:100%;margin-bottom:-6px">
+      <div class="w3-display-bottomleft w3-container w3-black">
+        <p>Bedroom Closet</p>
+      </div>
+    </div>
+    <div class="w3-display-container mySlides">
+    <img src="./grg.jpeg" style="width:100%;margin-bottom:-6px">
+      <div class="w3-display-bottomleft w3-container w3-black">
+        <p>Garage</p>
+      </div>
+    </div>
+    <div class="w3-display-container mySlides">
+    <img src="./itch.jpeg" style="width:100%;margin-bottom:-6px">
+      <div class="w3-display-bottomleft w3-container w3-black">
+        <p>Appliances</p>
+      </div>
+    </div>
+    <div class="w3-display-container mySlides">
+    <img src="./lngktchn.jpeg" style="width:100%;margin-bottom:-6px">
+      <div class="w3-display-bottomleft w3-container w3-black">
+        <p>Dining Room</p>
+      </div>
+    </div>
+    <div class="w3-display-container mySlides">
+    <img src="./mnrm.jpeg" style="width:100%;margin-bottom:-6px">
+      <div class="w3-display-bottomleft w3-container w3-black">
+        <p>Bedroom</p>
+      </div>
+    </div>
+    <div class="w3-display-container mySlides">
+    <img src="./kitch.jpeg" style="width:100%;margin-bottom:-6px">
+      <div class="w3-display-bottomleft w3-container w3-black">
+        <p>Kitchen II</p>
+      </div>
+    </div>
+  </div>
+  <div class=" w3-row-padding w3-section bottompics" style="">
+    <div class="w3-col s3">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="./lvngrm.jpeg" style="width:100%;cursor:pointer" onclick="currentDiv(1)" title="Living room">
+    </div>
+    <div class="w3-col s3">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="./wshrdryer.jpeg" style="width:100%;cursor:pointer" onclick="currentDiv(2)" title="Washer and Dryer">
+    </div>
+    <div class="w3-col s3">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="./mnrmclst.jpeg" style="width:100%;cursor:pointer" onclick="currentDiv(3)" title="Closet">
+    </div>
+    <div class="w3-col s3">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="./grg.jpeg" style="width:100%;cursor:pointer" onclick="currentDiv(4)" title="Garage">
+    </div>
+    <div class="w3-col s3">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="./itch.jpeg" style="width:100%;cursor:pointer" onclick="currentDiv(5)" title="Appliances">
+    </div>
+    <div class="w3-col s3">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="./lngktchn.jpeg" style="width:100%;cursor:pointer" onclick="currentDiv(6)" title="Dining room">
+    </div>
+    <div class="w3-col s3">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="./mnrm.jpeg" style="width:100%;cursor:pointer" onclick="currentDiv(7)" title="Bedroom">
+    </div>
+    <div class="w3-col s3">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="./kitch.jpeg" style="width:100%;cursor:pointer" onclick="currentDiv(8)" title="Kitchen II">
+    </div>
+  </div>
+  </div>
+
+
+<!-- !INFO SECIONS!-->
+  <div id="availability" class="hold w3-container" style="display:block;" >
+    <h4><strong>Availability</strong></h4>
+    <div class="it w3-row w3-large" >
+      <div class="rght w3-col s6">
+       <p class="thr">><i class="thr fa fa-fw fa-bed"></i> Bedrooms: 1</p>
+        <p class="thr"><i class="thr fa fa-fw fa-bath"></i> Bathrooms: 1</p>
+        <p class="thr"><i class="thr fa fa-fw fa-home"></i> Units Currently Available: <span style="color:red">0</span></p>
+        <p class="thr"><i class="thr fa fa-fw fa-usd"></i> <span style="color:green">$1350.00/mo</span> (No Garage, On-Site Parking)</p>
+        <p class="thr"><i class="thr fa fa-fw fa-usd"></i> <span style="color:green">$1400.00/mo</span> (Detached Garage + 1 parking lot Space)</p>
+
+      </div>
+      <div class="rght w3-col s6">
+        <p class="thr"><i class="thr fa fa-fw fa-bed"></i> Bedrooms: 2</p>
+        <p class="thr"><i class="thr fa fa-fw fa-bath"></i> Bathrooms: 2</p>
+        <p class="thr"><i class="thr fa fa-fw fa-home"></i> Units Currently Available: <span style="color:red">0</span></p>
+        <p class="thr"><i class="thr fa fa-fw fa-usd"></i> <span style="color:green">$1650.00/mo</span> (No Garage, On-Site Parking)</p>
+        <p class="thr"><i class="thr fa fa-fw fa-usd"></i> <span style="color:green">$1750.00/mo</span> (Attached Garage + 1 parking lot Space)</p>
+
+      </div>
+      <div class="rght w3-col s6">
+       <p class="thr"><i class="thr fa fa-fw fa-bed"></i> Bedrooms: 3</p>
+        <p class="thr"><i class="thr fa fa-fw fa-bath"></i> Bathrooms: 2</p>
+        <p class="thr"><i class="thr fa fa-fw fa-home"></i> Units Currently Available: <span style="color:red">0</span></p>
+        <p class="thr"><i class="thr fa fa-fw fa-usd"></i> <span style="color:green">$2000.00/mo</span> (Attached Garage + 1 parking lot Space)</p>
+
+
+    </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <hr>
+    <div class="hold w3-container">
+    <h4 id="amenities"><strong>Amenities</strong></h4>
+    <div class=" w3-row w3-large">
+      <div class="w3-col s6">
+        <p><span class="fa fa-fw fa-shower"></span>Shower</p>
+        <p><span class="fa fa-fw fa-wifi"></span>IOT Appliances</p>
+        <p><span class="fa fa-fw fa-tv"></span>Cable ready (Spectrum)</p>
+      </div>
+      <div class=" w3-col s6">
+        <p><span class="fa fa-fw fa-cutlery"></span>Kitchen</p>
+        <p><span class="fa fa-fw fa-home"></span>Garage</p>
+        <p><span class="fa fa-fw fa-wheelchair"></span>Accessible</p>
+      </div>
+    </div>
+    <hr>
+    
+    <h4 id="about-us"><strong>About Us</strong></h4>
+    <p>We have just finished construction of these brand new Loft-style apartments!
+2 minutes to 13th Street and 3 mins away from I-41, I-43, I-894 and I-94! Food restaurants will surround you! 5 minutes away from 27th Street, 10 minutes away from the nearest Walmart and the Airport is just 5 minutes away! Boasting an Attached/Detached Garage -Including outside parking in the Parking lot, you'll live comfortably in a quiet and safe neighborhood!
+Washer and Dryer, Stove, Refrigerator and Kitchen Island Marble-Tops are part of every unit! New Kitchen cabinets with high grade wood! And for your storage needs you'll find storage closets in every unit. We have a Tenant portal to simplify your paying, communication and tracking needs. Land-owner pays water for your convenience!</p>
+   <!-- <p>We accept: <i class="fa fa-credit-card w3-large"></i> <i class="fa fa-cc-mastercard w3-large"></i> <i class="fa fa-cc-amex w3-large"></i> <i class="fa fa-cc-cc-visa w3-large"></i><i class="fa fa-cc-paypal w3-large"></i></p> -->
+    <hr>
+    
+    <h4><strong>Rules</strong></h4>
+    <p>Potential tenant must first submit an application and be approved to move on to the next step, verify Income, to be considered for a unit. 12 mo. Leases. Deposit equal to 1 months rent due at signing. First month's rent due at move-in date, no exceptions. Additional parking negotiable. Landowner pays Water bill, Tenant Resposible for Gas/Elecric. NO Smoking. NO Pets unless agreed upon, pet fee $100, if so. Quiet hours begin @ 10:00P.M. U.S. Central Time. Garbage and Recycle Disposal Available, tenant must do their best to Recycle.</p>
+    <p>ANY OTHER QUESTIONS, PLEASE REACH OUT FOR INFO.</p>
+    <a href="https://layton.app.doorloop.com/tenant-portal/rental-application?&propertyId=62b0713261238d3b6540b88e"><button class="apply">APPLY NOW!</button></a>
+    <br>
+    <br>
+    <br>
+    <hr>
+  <!-- <div class="w3-container" id="contact">
+    <h2>Contact</h2>
+    <i class="fa fa-map-marker" style="width:30px"></i>53221 Milwaukee, US<br>
+    <a href="sms:(414) 484-8330"><i class="fa fa-phone" style="width:30px; color:green;"></i> <span style="color:green">Text: (414)484-8330</span></a><br>
+    <i class="fa fa-envelope" style="width:30px"> </i> Email: <br>
+    <p>Questions? Go ahead, ask them:</p>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
+    <button type="submit" class=" w3-button w3-brown w3-third" style="display:flex; justify-content:flex-end;">Send a Message</button>
+    </form>
+  </div> -->
+<div id="maps-and-directions" class="center-div" style="width:100%; overflow:hidden">
+  <h2>Location</h2>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2919.892720202778!2d-87.92226728280335!3d42.95946511695805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880516d84a356bc9%3A0x155f5a3ef6986742!2s800%20W%20Layton%20Ave%2C%20Milwaukee%2C%20WI%2053221!5e0!3m2!1sen!2sus!4v1675767052568!5m2!1sen!2sus" width="100%" height="450" style="border:0; max-width:650px" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+<!-- End page content --
+</div>
+
+<!-- Subscribe Modal --
+<div id="subscribe" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom w3-padding-large">
+    <div class="w3-container w3-white w3-center">
+      <i onclick="document.getElementById('subscribe').style.display='none'" class="fa fa-remove w3-button w3-xlarge w3-right w3-transparent"></i>
+      <h2 class="w3-wide">SUBSCRIBE</h2>
+      <p>Join our mailing list to receive updates on available dates and special offers.</p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail"></p>
+      <button type="button" class="w3-button w3-padding-large w3-green w3-margin-bottom" onclick="document.getElementById('subscribe').style.display='none'">Subscribe</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// Script to open and close sidebar when on tablets and phones
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+-->
+
+
+<script>
+// Slideshow Apartment Images
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+  }
+  x[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " w3-opacity-off";
+}
+</script> 
+
+
+
+
+<br />
+
+<br />
+      <footer class="w3-container w3-center w3-padding-48 w3-margin-top">
+        <p style="color:grey;padding:0;margin:0;" >In collaboration with <strong> Ad Vision, LLC</strong></p>
+        <p style="color:grey;padding:0;margin:0;" >RoseClade, LLC 2023.</p><p style="color:grey;padding:0;margin:0;"> All Rights reserved.</p>
+        <a class="w3-margin-bottom" href="https://www.w3schools.com/spaces" title="This website was made with W3schools Spaces. Make your own free website today!" target="_blank">
+          <img src="https://spaces.w3schools.com/logo_4x.png" width="50" height="50">
+        </a> 
+      <!-- End footer -->
+      </footer>
+    <svg xmlns="http://www.w3.org/2000/svg" height="0" width="0">
+        <symbol id="phone" viewBox="0 0 32 32">
+            <path d="M22 20c-2 2-2 4-4 4s-4-2-6-4-4-4-4-6 2-2 4-4-4-8-6-8-6 6-6 6c0 4 4.109 12.109 8 16s12 8 16 8c0 0 6-4 6-6s-6-8-8-6z" fill="white">
+            </path>
+        </symbol>
+    </svg>
+</body>
+</html>
